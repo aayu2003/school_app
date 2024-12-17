@@ -10,4 +10,4 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Serve the HTML file
 @app.get("/", response_class=FileResponse)
 def serve_html():
-    return FileResponse("app.html")
+    return FileResponse("login.html")
