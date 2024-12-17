@@ -5,7 +5,7 @@ from fastapi.responses import FileResponse
 app = FastAPI()
 
 # Mount the static files directory
-#app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Serve the HTML file
 @app.get("/", response_class=FileResponse)
