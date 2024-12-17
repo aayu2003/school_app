@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Cash Roll Container -->
+        <div class="cash-roll-container">
+            <div class="header">
+                <span class="cash-icon">💵</span>
+                <h3>Cash Roll</h3>
+                <select id="dropdown" class="dropdown">
+                    <option value="default">Select Option</option>
+                    <option value="add">Add Cash</option>
+                    <option value="deduct">Deduct Cash</option>
+                </select>
+            </div>
+
+            <!-- Cash Boxes -->
+            <div class="cash-box green">
+                <span class="amount" id="cash-add">$2,00,000</span>
+                <span class="arrow">▲</span>
+            </div>
+
+            <div class="cash-box red">
+                <span class="amount" id="cash-deduct">$8,000</span>
+                <span class="arrow">▼</span>
+            </div>
+        </div>
+        
+        <!-- Finance Card Section -->
+        <div class="finance-card">
+            <h2>Finance Dashboard</h2>
+            <h3>Finance Overview</h3>
+            <div class="finance-row">
+                <span>Total Amount</span>
+                <span>$12,000</span>
+            </div>
+            <div class="finance-row">
+                <span>Paid</span>
+                <span>$7,500</span>
+            </div>
+            <div class="finance-row">
+                <span>Remaining</span>
+                <span>$4,500</span>
+            </div>
+        </div>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Students Dues Section -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #505050, #3e3e3e);
+            }
+    
+            .container {
+                padding: 20px;
+            }
+    
+            .section {
+                background: linear-gradient(135deg, #505050, #3e3e3e);
+                border-radius: 8px;
+                padding: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+    
+            h3 {
+                margin-top: 0;
+            }
+    
+            .list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+    
+            .list-item {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+    
+            .student-info {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 10px;
+            }
+    
+            .student-details {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+            }
+    
+            .student-name {
+                font-size: 16px;
+                font-weight: bold;
+                margin-right: 10px;
+                cursor: pointer;
+                transition: color 0.3s ease;
+            }
+    
+            .amount {
+                font-size: 14px;
+                font-weight: bold;
+                color: #fffefe;
+            }
+    
+            .view-profile-btn {
+                background-color: #2a9d8f;
+                color: rgb(135, 132, 132);
+                padding: 8px 12px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                margin-top: 5px;
+            }
+    
+            .view-profile-btn:hover {
+                background-color: #21867a;
+                transform: scale(1.05);
+            }
+    
+            .student-id,
+            .notify-icon,
+            .call-icon {
+                font-size: 14px;
+                color: #fdfbfb;
+            }
+    
+            .student-id {
+                font-style: italic;
+            }
+    
+            .notify-icon,
+            .call-icon {
+                cursor: pointer;
+                transition: transform 0.2s ease;
+            }
+    
+            .notify-icon:hover,
+            .call-icon:hover {
+                transform: scale(1.1);
+            }
+    
+            .toggle-color {
+                transition: color 0.3s ease;
+            }
+    
+            /* Change selection color to light grey */
+            .student-info::selection,
+            .student-info *::selection {
+                background-color: #5c5959; /* Light grey */
+                color: #000; /* Text color */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Students Dues Section -->
+            <div class="section">
+                <h3>Students Dues</h3>
+                <ul class="list">
+                    <li class="list-item">
+                        <div class="student-info">
+                            <div class="student-details">
+                                <span class="student-name toggle-color">John Doe</span>
+                                <span class="amount">$250</span>
+                            </div>
+                            <button class="view-profile-btn">View Profile</button>
+                            <span class="student-id">(ID: 1001)</span>
+                            <span class="notify-icon" title="Notify">🔔</span>
+                            <span class="call-icon" title="Call">📞</span>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="student-info">
+                            <div class="student-details">
+                                <span class="student-name toggle-color">Jane Smith</span>
+                                <span class="amount">$350</span>
+                            </div>
+                            <button class="view-profile-btn">View Profile</button>
+                            <span class="student-id">(ID: 1002)</span>
+                            <span class="notify-icon" title="Notify">🔔</span>
+                            <span class="call-icon" title="Call">📞</span>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="student-info">
+                            <div class="student-details">
+                                <span class="student-name toggle-color">Mark Johnson</span>
+                                <span class="amount">$150</span>
+                            </div>
+                            <button class="view-profile-btn">View Profile</button>
+                            <span class="student-id">(ID: 1003)</span>
+                            <span class="notify-icon" title="Notify">🔔</span>
+                            <span class="call-icon" title="Call">📞</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    </html>
+
+        <!-- Unpaid Teachers Section -->
+        <div class="section">
+            <h3 class="collapsible-header">Unpaid Teachers</h3>
+            <div class="collapsible-content">
+                <ul class="list">
+                    <li class="list-item">
+                        <span>Dr. Smith</span>
+                        <span>$1,000</span>
+                    </li>
+                    <li class="list-item">
+                        <span>Prof. Williams</span>
+                        <span>$1,500</span>
+                    </li>
+                    <li class="list-item">
+                        <span>Ms. Johnson</span>
+                        <span>$1,200</span>
+                    </li>
+                    <li class="list-item">
+                        <span>Mr. Brown</span>
+                        <span>$1,800</span>
+                    </li>
+                </ul>
+                <button class="pay-btn">Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the collapsible list
+        const collapsibleHeader = document.querySelector('.collapsible-header');
+        const collapsibleContent = document.querySelector('.collapsible-content');
+
+        collapsibleHeader.addEventListener('click', () => {
+            collapsibleContent.classList.toggle('visible');
+        });
+    </script>
+
+    <style>
+        /* Collapsible header styles */
+        .collapsible-header {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .collapsible-header:hover {
+            background-color: #444;
+        }
+
+        /* Collapsible content with scrollable list */
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .collapsible-content.visible {
+            max-height: 200px; /* Adjust based on desired height */
+            opacity: 1;
+            overflow-y: auto;
+        }
+
+        .collapsible-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .collapsible-content::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+
+        .collapsible-content::-webkit-scrollbar-thumb:hover {
+            background-color: #444;
+        }
+
+        /* Student dues list styles */
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.2s ease;
+        }
+
+        .list-item:hover {
+            background-color: #917b7b83;
+        }
+
+        .view-profile-btn {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .view-profile-btn:hover {
+            background-color: #21867a;
+            transform: scale(1.05);
+        }
+
+        /* Pay button */
+        .pay-btn {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .pay-btn:hover {
+            background-color: #21867a;
+            transform: scale(1.05);
+        }
+    </style>
+</body>
+</html>
