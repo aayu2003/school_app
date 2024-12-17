@@ -1,0 +1,273 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    cursor: none;
+}
+
+/* Body Background */
+body, html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3a3a3a, #6c6c6c, #8d8d8d);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+/* Keyframes for Moving Gradient */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main content container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 50px;
+    background-color: #2c2c2c;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1.2s ease-out;
+}
+.cash-roll-container {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, #424242, #363636);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cash-roll-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cash-roll-container .header h3 {
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+.cash-roll-container .dropdown {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #333;
+    color: #e0e0e0;
+    border: none;
+    outline: none;
+}
+
+.cash-box {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cash-box.green {
+    background-color: #2a9d8f;
+    box-shadow: 0 6px 15px rgba(42, 157, 143, 0.3);
+}
+
+.cash-box.red {
+    background-color: #e76f51;
+    box-shadow: 0 6px 15px rgba(231, 111, 81, 0.3);
+}
+
+.cash-box .amount {
+    font-size: 28px;
+}
+
+.cash-box .arrow {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Finance Card */
+.finance-card {
+    background: linear-gradient(135deg, #505050, #3e3e3e);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.finance-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h2 {
+    font-size: 36px;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Finance Rows */
+.finance-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.finance-row span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+/* Section for unpaid dues */
+.section {
+    background: linear-gradient(135deg, #424242, #363636);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* List Items */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #e0e0e0;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.2s ease;
+}
+
+.list-item:hover {
+    background-color: #565656;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+/* Pay Button */
+.pay-btn {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pay-btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.pay-btn:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+}
+
+/* Cursor Styles */
+.inner-cursor {
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    background: #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.outer-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Keyframe Animation for Fade In */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .finance-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pay-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
